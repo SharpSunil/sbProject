@@ -1,0 +1,13 @@
+.header-parent{
+    border:1px solid red;
+    .header-cont{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px;
+        .left-box{
+            display: flex;
+            align-items: center;justify-content: center;gap:10px;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 :root {
-  --primary: #70FF6F;
-  --accent: #70FF6F;
+  --primary: #70ff6f;
+  --accent: #70ff6f;
   --white: #ffffff;
   --text: #64748b;
   --grey: #f8fafc;
@@ -90,23 +90,7 @@ p {
   }
 }
 
-.btn {
-  cursor: pointer;
-  border: 3px solid var(--accent);
-  background: var(--accent);
-  color: var(--white) !important;
-  font-size: 18px;
-  padding: 5px 20px;
-  border-radius: 200px;
-  text-decoration: none;
-  transition: var(--trans);
-  width: fit-content;
 
-  &:hover {
-    background: transparent;
-    color: var(--accent) !important;
-  }
-}
 
 a {
   text-decoration: none;
