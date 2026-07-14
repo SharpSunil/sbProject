@@ -23,9 +23,15 @@
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 500;
+<<<<<<< HEAD
     color: var(--white);
 
     transition: var(--transition);
+=======
+    color: #000;
+text-decoration :none;
+    transition: color 0.45s ease;
+>>>>>>> 1950e277c1576be66de0233a7102449ebb2ad349
   }
 
   .icon {

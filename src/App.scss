@@ -7,6 +7,7 @@
 ========================================== */
 
 :root {
+<<<<<<< HEAD
   /* Brand Colors */
 
   --accent: #0f3d2e;
@@ -14,6 +15,10 @@
   --gold: #c9a34e;
   --charcoal: #1c1c1c;
   --ivory: #f7f4ed;
+=======
+   --primary: #70ff6f;
+  --accent: #70ff6f;
+>>>>>>> 1950e277c1576be66de0233a7102449ebb2ad349
   --white: #ffffff;
   --text: #5d5d5d;
   --border: #e5dfd3;
@@ -164,6 +169,7 @@ p {
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 600px) {
   .cont {
     padding: 0 16px;
@@ -180,4 +186,10 @@ p {
   h3 {
     font-size: 26px;
   }
+=======
+a{
+  text-decoration: none;
+>>>>>>> 1950e277c1576be66de0233a7102449ebb2ad349
 }
+
+
