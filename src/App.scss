@@ -1,97 +1,183 @@
+/* ==========================================
+   GOOGLE FONTS
+========================================== */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+/* ==========================================
+   ROOT VARIABLES
+========================================== */
+
 :root {
-  --primary: #70ff6f;
-  --accent: #70ff6f;
+  /* Brand Colors */
+
+  --accent: #0f3d2e;
+  --accent2: #195341;
+  --gold: #c9a34e;
+  --charcoal: #1c1c1c;
+  --ivory: #f7f4ed;
   --white: #ffffff;
-  --text: #64748b;
-  --grey: #f8fafc;
-  --gap: 20px;
-
-  --max-width: 1260px;
-  --trans: all 0.2s ease-in-out;
-  --shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  --rad: 10px;
+  --text: #5d5d5d;
+  --border: #e5dfd3;
+  --grey: #efece6;
+  --background:#f7f4ed;
+  /* Layout */
+  --max-width: 1200px;
+  --gap: 10px;
+  --trans: all 0.35s ease;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* ==========================================
+   RESET
+========================================== */
+
+*,
 *::before,
-*::after,
-* {
+*::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  // border: 1px solid red;
-  scroll-behavior: smooth !important;
-  margin: 0px;
-  font-family: "Poppins", sans-serif;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-// font-family: 'Poppins', sans-serif;
-
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
 html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
 }
 
-.heading,
+/* ==========================================
+   CONTAINER
+========================================== */
+.parent {
+  width: 100%;
+}
+.cont {
+  max-width: var(--max-width);
+  margin: auto;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--charcoal);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 54px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 18px;
 }
 
 p {
-  text-align: justify;
-  font-size: 1rem;
-  line-height: 28px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
-  font-weight: 300;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 1.9;
   color: var(--text);
+  font-weight: 400;
 }
 
-@media only screen and (max-width: 1000px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    text-align: center;
-  }
-}
 
-.bg-img-cover {
+/* ==========================================
+   IMAGE HELPERS
+========================================== */
+
+.bg-cover {
   background-position: center center !important;
+  background-repeat: no-repeat !important;
   background-size: cover !important;
-  background-repeat: no-repeat !important;
-  border-radius: 10px !important;
 }
-.bg-img-contain {
+
+.bg-contain {
   background-position: center center !important;
-  background-size: contain !important;
   background-repeat: no-repeat !important;
-  border-radius: 10px !important;
+  background-size: contain !important;
 }
 
-.parent {
-  width: 100%;
 
-  .cont {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 0px 10px;
-    height: 100%;
-    // background: rgba(102, 51, 153, 0.073);
+
+@media (max-width: 991px) {
+  section {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+
+    line-height: 1.8;
   }
 }
 
+@media (max-width: 600px) {
+  .cont {
+    padding: 0 16px;
+  }
 
+  h1 {
+    font-size: 38px;
+  }
 
-a {
-  text-decoration: none;
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
 }
