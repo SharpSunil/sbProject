@@ -1,13 +1,23 @@
-.header-parent{
-    border:1px solid red;
-    .header-cont{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding:10px;
-        .left-box{
-            display: flex;
-            align-items: center;justify-content: center;gap:10px;
-        }
+.header-parent {
+  border: 1px solid red;
+  .header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    .left-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border:1px solid red; 
+      padding:10px 20px;
+      border-radius:50px;
+      background:black;
+      .logo{
+        
+      }
+
     }
+  }
 }
