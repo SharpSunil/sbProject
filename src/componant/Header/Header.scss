@@ -1,5 +1,4 @@
 .header-parent {
-<<<<<<< HEAD
   position: relative;
   width: 100%;
   z-index: 999;
@@ -8,14 +7,10 @@
         TOP HEADER
   =========================*/
 
-=======
-  border: 1px solid red;
->>>>>>> 1950e277c1576be66de0233a7102449ebb2ad349
   .header-cont {
     display: flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD
     padding: 18px 0;
 
     .left-box {
@@ -630,22 +625,4 @@
       }
     }
   }
-=======
-    padding: 10px;
-    .left-box {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border:1px solid red; 
-      padding:10px 20px;
-      border-radius:50px;
-      background:black;
-      .logo{
-        
-      }
-
-    }
-  }
->>>>>>> 1950e277c1576be66de0233a7102449ebb2ad349
 }
