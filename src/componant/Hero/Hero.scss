@@ -1,11 +1,5 @@
 .hero-parent {
-  background: linear-gradient(
-    to bottom,
-    var(--accent) 0%,
-    #82ff6b 40%,
-    #6dd957 80%,
-    #2b6020 100%
-  );
+  background: linear-gradient(to bottom, #195341 50%, #2f2f2fb2 100%);
 
   height: 100vh;
   margin-top: -95px;
@@ -28,7 +22,7 @@
         font-size: 140px;
         font-weight: 700;
         line-height: 100px;
-        color: rgb(0, 0, 0);
+        color: black;
       }
       span {
         font-size: 36px;
@@ -41,7 +35,7 @@
         font-size: 288px;
         font-weight: 600;
         line-height: 297.6px;
-        color: rgb(0, 0, 0);
+        color: black;
       }
       .tagline {
         display: flex;
@@ -81,14 +75,14 @@
         font-size: 288px;
         font-weight: 600;
         line-height: 297.6px;
-        color: rgb(0, 0, 0);
+        color: black;
       }
       h2 {
         font-family: "Space Grotesk", "Space Grotesk Fallback";
         font-size: 65px;
         font-weight: 700;
         line-height: 71.5px;
-        color: rgb(0, 0, 0);
+        color: black;
       }
     }
 
@@ -96,11 +90,20 @@
       position: absolute;
       top: 70%;
       right: -50px;
-
+      color: black;
+      cursor: pointer;
+      z-index: 111;
       transform: translateY(-50%) rotate(-90deg);
-
       display: flex;
       gap: 20px;
+
+      span {
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--gold);
+        }
+      }
     }
 
     .shape {
@@ -111,39 +114,49 @@
     }
     .shape1,
     .shape2,
-    .shape3, .shape4 {
+    .shape3,
+    .shape4 {
       left: 10%;
       top: 20%;
-      background: url("../../assets/background_stuck/bg1.webp");
-      filter: brightness(0) saturate(100%) invert(32%) sepia(81%)
-        saturate(1384%) hue-rotate(257deg) brightness(94%) contrast(95%);
       animation: floatShape 15s ease-in-out infinite;
       transform-origin: center;
       will-change: transform;
     }
+
+    /* Royal Gold */
+    .shape1 {
+      background: url("../../assets/background_stuck/bg1.webp");
+      filter: brightness(1) saturate(100%) invert(30%) sepia(48%)
+        saturate(1038%) hue-rotate(131deg) brightness(92%) contrast(93%);
+    }
+
     .shape2 {
       background: url("../../assets/background_stuck/bg4.webp");
-      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-        hue-rotate(0deg) brightness(120%) contrast(100%);
+      filter: brightness(0) saturate(100%) invert(94%) sepia(21%) saturate(720%)
+        hue-rotate(350deg) brightness(108%) contrast(95%);
       left: auto;
       right: 10%;
     }
+
+    /* Deep Metallic Gold */
     .shape3 {
       background: url("../../assets/background_stuck/bg3.webp");
       top: auto;
       bottom: 25%;
-      left:5%;
-      filter: brightness(0) saturate(100%) invert(42%) sepia(98%)
-        saturate(1300%) hue-rotate(190deg) brightness(98%) contrast(98%);
+      left: 5%;
+      filter: brightness(0) saturate(100%) invert(59%) sepia(74%) saturate(960%)
+        hue-rotate(8deg) brightness(98%) contrast(101%);
     }
-     .shape4 {
+
+    /* Bronze Gold */
+    .shape4 {
       background: url("../../assets/background_stuck/bg2.webp");
       top: auto;
       bottom: 25%;
-      left:auto;
-      right:20%;
-      filter: brightness(0) saturate(100%) invert(42%) sepia(98%)
-        saturate(1300%) hue-rotate(190deg) brightness(98%) contrast(98%);
+      left: auto;
+      right: 20%;
+      filter: brightness(0) saturate(100%) invert(92%) sepia(12%) saturate(300%)
+        hue-rotate(120deg) brightness(110%) contrast(95%);
     }
     @keyframes floatShape {
       0% {
@@ -168,6 +181,286 @@
 
       100% {
         transform: translate3d(0, 0, 0) rotate(0deg);
+      }
+    }
+  }
+}
+/* ===========================
+   Large Desktop (1600px+)
+=========================== */
+@media (min-width: 1600px) {
+  .hero-parent {
+    .hero-cont {
+      .top-text {
+        h3 {
+          font-size: 160px;
+          line-height: 120px;
+        }
+
+        .digital {
+          font-size: 320px;
+          line-height: 320px;
+        }
+      }
+
+      .bottom-row {
+        .marketing {
+          font-size: 320px;
+          line-height: 320px;
+        }
+
+        h2 {
+          font-size: 72px;
+        }
+      }
+    }
+  }
+}
+
+/* ===========================
+   Laptop (1200px - 1399px)
+=========================== */
+@media (max-width: 1399px) {
+  .hero-parent {
+    .hero-cont {
+      .top-text {
+        h3 {
+          font-size: 110px;
+          line-height: 90px;
+        }
+
+        .digital {
+          font-size: 220px;
+          line-height: 220px;
+        }
+
+        .tagline {
+          margin-top: 90px;
+
+          p {
+            font-size: 18px;
+            width: 22ch;
+          }
+
+          span {
+            font-size: 60px;
+          }
+        }
+      }
+
+      .bottom-row {
+        .marketing {
+          font-size: 220px;
+          line-height: 220px;
+        }
+
+        h2 {
+          font-size: 55px;
+        }
+      }
+
+      .shape {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}
+
+/* ===========================
+   Tablet (992px - 1199px)
+=========================== */
+@media (max-width: 1199px) {
+  .hero-parent {
+    height: auto;
+    padding: 160px 20px 80px;
+
+    .hero-cont {
+      .top-text {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        h3 {
+          font-size: 70px;
+          line-height: 70px;
+        }
+
+        .digital {
+          font-size: 150px;
+          line-height: 150px;
+        }
+
+        span {
+          font-size: 26px;
+        }
+
+        .tagline {
+          margin-top: 40px;
+
+          p {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      .bottom-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .marketing {
+          font-size: 150px;
+          line-height: 150px;
+        }
+
+        h2 {
+          font-size: 45px;
+          text-align: center;
+        }
+      }
+
+      .social {
+        margin-top: 40px;
+        // justify-content: center;
+      }
+
+      .shape {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+}
+
+/* ===========================
+   Mobile (768px - 991px)
+=========================== */
+@media (max-width: 991px) {
+  .hero-parent {
+    padding: 130px 20px 70px;
+
+    .hero-cont {
+      .top-text {
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+          font-size: 52px;
+          line-height: 52px;
+        }
+
+        .digital {
+          font-size: 100px;
+          line-height: 100px;
+        }
+
+        span {
+          display: none;
+        }
+
+        .tagline {
+          margin-top: 20px;
+
+          p {
+            width: 100%;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      .bottom-row {
+        .marketing {
+          font-size: 100px;
+          line-height: 100px;
+        }
+
+        h2 {
+          font-size: 34px;
+          line-height: 40px;
+        }
+      }
+
+      .shape {
+        width: 70px;
+        height: 70px;
+      }
+
+      .shape1 {
+        left: 5%;
+        top: 10%;
+      }
+
+      .shape2 {
+        right: 5%;
+        top: 10%;
+      }
+
+      .shape3 {
+        left: 5%;
+        bottom: 12%;
+      }
+
+      .shape4 {
+        right: 5%;
+        bottom: 12%;
+      }
+    }
+  }
+}
+
+/* ===========================
+   Small Mobile (<576px)
+=========================== */
+@media (max-width: 575px) {
+  .hero-parent {
+    padding: 120px 15px 60px;
+
+    .hero-cont {
+      .top-text {
+        h3 {
+          font-size: 36px;
+          line-height: 40px;
+        }
+
+        .digital {
+          font-size: 72px;
+          line-height: 72px;
+        }
+
+        .tagline {
+          p {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      .bottom-row {
+        gap: 0;
+
+        .marketing {
+          font-size: 72px;
+          line-height: 72px;
+        }
+
+        h2 {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+
+      .social {
+        gap: 12px;
+        font-size: 14px;
+      }
+
+      .shape {
+        width: 50px;
+        height: 50px;
+        opacity: 0.5;
       }
     }
   }
