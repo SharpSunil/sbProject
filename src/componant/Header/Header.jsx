@@ -205,10 +205,7 @@ const Header = () => {
         </div>
 
         <div className="bottom-group">
-          <div className="theme-switch">
-            <span>🌙</span>
-            <span>☀️</span>
-          </div>
+         
 
           <div className="socials">
             <a href="#"><FaFacebookF /></a>
