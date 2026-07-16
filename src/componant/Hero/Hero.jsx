@@ -6,7 +6,7 @@ const Hero = () => {
 
 
 
-            <div className="hero-cont cont">
+            <div className="hero-cont cont1">
                 {/* Decorative Elements */}
                 <span className="shape shape1 bg-contain"></span>
                 <span className="shape shape2 bg-contain" ></span>

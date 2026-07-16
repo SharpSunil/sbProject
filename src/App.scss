@@ -18,9 +18,10 @@
   --text: #5d5d5d;
   --border: #e5dfd3;
   --grey: #efece6;
-  --background:#f7f4ed;
+  --background: #f7f4ed;
   /* Layout */
-  --max-width: 1650px;
+  --max-width1: 1650px;
+  --max-width: 1200px;
   --gap: 10px;
   --trans: all 0.35s ease;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -61,6 +62,12 @@ ul {
 ========================================== */
 .parent {
   width: 100%;
+}
+.cont1 {
+  max-width: var(--max-width1);
+  margin: auto;
+  width: 100%;
+  padding: 0 10px;
 }
 .cont {
   max-width: var(--max-width);
@@ -117,7 +124,6 @@ p {
   font-weight: 400;
 }
 
-
 /* ==========================================
    IMAGE HELPERS
 ========================================== */
@@ -133,8 +139,6 @@ p {
   background-repeat: no-repeat !important;
   background-size: contain !important;
 }
-
-
 
 @media (max-width: 991px) {
   section {
@@ -181,5 +185,3 @@ p {
     font-size: 26px;
   }
 }
-
-
