@@ -1,10 +1,11 @@
-.abt_comp{
-  height: 100svh;
-   width: 100%;
-   background-color: #010101;
-   position: relative;
+.abt_comp {
+  height: auto;
+  width: 100%;
+  background-color: #010101;
+  position: relative;
+ 
 
-   .overlay1{
+  .overlay1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -13,30 +14,157 @@
     background: url("../../assets/background_stuck/grid.png");
     background-size: contain;
     opacity: 0.5;
-   }
+  }
 
-   .overlay2{
+  .overlay2 {
     height: 100%;
     width: 100%;
     position: absolute;
     background: radial-gradient(circle at 15%, transparent 0%, #010101 14%);
-   }
-   
-   .cl_overlay{
+  }
+
+  .cl_overlay {
     position: absolute;
     top: 0;
     left: 2%;
     height: 500px;
     width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  // img{
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: contain;
-  // }
-   }
+    // img{
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: contain;
+    // }
+  }
 
+  .abt_comp_cont {
+    height: 100%;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    .left {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .circle{
+        position: absolute;
+        left: 10%;
+        top: 20%;
+      }
+
+      .image{
+        width: 60%;
+        height: 50%;
+        background-color: red;
+        border-radius: 10px;
+        position: absolute;
+        top: 5%;
+      }
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: calc(var(--gap) * 8);
+      height: 100%;
+      padding: 100px 0px;
+
+      .top{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: calc(var(--gap) * 8);
+
+        .count{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+
+
+          h3{
+            font-size: 94px;
+            color: #6EFF6E;
+              font-family: "Inter", sans-serif;
+          }
+
+          p{
+            text-align: left;
+            line-height: 140%;
+            color: white;
+          }
+        }
+      }
+
+    .ct{
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+
+        h4{
+        font-size: 84px;
+        color: var(--white);
+
+
+        span{
+          color: #6EFF6E;
+        }
+      }
+
+      p{
+        font-size: 26px;
+        line-height: 140%;
+      }
+    }
+
+    .services{
+      display: flex;
+      gap: calc(var(--gap) * 3);
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+
+
+      .sr_left,.sr_right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--gap) * 3);
+
+        .box{
+          width: 300px;
+          height: 300px;
+          background-color: red;
+        }
+
+      
+      }
+
+      .sr_right{
+        transform: translateY(50px);
+      }
+    }
+    }
+  }
+}
+
+
+.testimoneal{
+  width: 100%;
+  height: 100svh;
+  background-color: blue;
 }

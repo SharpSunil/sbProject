@@ -1,0 +1,44 @@
+.round-text-badge {
+  display: inline-flex;
+  width: 160px;
+  height: 160px;
+  
+  padding: 16px;
+  border-radius: 50%;
+
+  &__svg {
+    width: 100%;
+    height: 100%;
+    animation: round-text-spin 12s linear infinite;
+  }
+
+  &__circle {
+    fill: #57e389;
+    stroke: none;
+  }
+
+  &__text {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    fill: #0a0a0a;
+  }
+
+  &__arrow {
+    fill: none;
+    stroke: #0a0a0a;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+
+@keyframes round-text-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
