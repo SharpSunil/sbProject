@@ -5,13 +5,13 @@ import "./About_Comp.scss";
 import glow from "../../assets/background_stuck/glow.png";
 import circle_img from "../../assets/background_stuck/circle.webp"
 import RoundText from "../RoundText/RoundText";
+import heroVideo from "../../assets/1.mp4"
 gsap.registerPlugin(ScrollTrigger);
 
 const About_Comp = () => {
   const compRef = useRef(null);
   const imageRef = useRef(null);
   const testimonealRef = useRef(null);
-
   useEffect(() => {
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
@@ -40,9 +40,19 @@ const About_Comp = () => {
         <div className="abt_comp_cont cont">
           <div className="left">
             <div class="circle">
-              <img src={circle_img} alt=""/>
+              <img src={circle_img} alt="" />
             </div>
-            <div className="image" ref={imageRef}></div>
+            <div className="image" ref={imageRef}>
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="hero-video"
+              >
+                <source src={heroVideo} type="video/mp4" />
+              </video>
+            </div>
           </div>
           <div className="right">
             <div className="top">
@@ -58,7 +68,7 @@ const About_Comp = () => {
                   Active members <br /> inside the program
                 </p>
               </div>
-              <RoundText/>
+              <RoundText />
             </div>
             <div className="ct">
               <h4>
