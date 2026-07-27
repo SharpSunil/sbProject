@@ -1,0 +1,263 @@
+.service-parent {
+  width: 100%;
+  background: #090909;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+
+  .service-cont {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  /*==========================
+          TOP
+  ==========================*/
+
+  .top-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    .left-side {
+      flex: 1;
+
+      h2 {
+        color: #fff;
+        font-size: clamp(50px, 5vw, 80px);
+        line-height: 1.1;
+        font-weight: 700;
+      }
+    }
+
+    .right-side {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      .tag-line {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        span {
+          color: #6cff5c;
+          font-size: 60px;
+          line-height: 1;
+        }
+
+        p {
+          color: #d8d8d8;
+          font-size: 20px;
+          line-height: 1.6;
+        }
+      }
+
+      .circle-btn {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: none;
+        background: #7dff63;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: .35s;
+
+        svg {
+          font-size: 42px;
+          color: #111;
+          transition: .35s;
+        }
+
+        &:hover {
+          transform: scale(1.08);
+
+          svg {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  /*==========================
+          GRID
+  ==========================*/
+
+  .bottom-side {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-rows: repeat(2, 360px);
+
+    gap: 30px;
+  }
+
+  /*==========================
+        COMMON CARD
+  ==========================*/
+
+  .image-card,
+  .service-card {
+    border-radius: 24px;
+    background: #171717;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /*==========================
+        IMAGE CARD
+  ==========================*/
+
+  .image-card {
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+
+      transition: .45s ease;
+    }
+  }
+
+  /*==========================
+        SERVICE CARD
+  ==========================*/
+
+  .service-card {
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #2b2b2b;
+
+    transition: .35s;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+
+    &.active {
+      border-color: #74ff62;
+      box-shadow: 0 20px 60px rgba(116, 255, 98, .12);
+    }
+
+    .card-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: fit-content;
+
+      padding: 8px 18px;
+
+      border-radius: 40px;
+
+      background: #74ff62;
+
+      color: #111;
+
+      font-size: 13px;
+
+      font-weight: 700;
+    }
+
+    h3 {
+      margin-top: 25px;
+
+      color: #fff;
+
+      font-size: 34px;
+
+      line-height: 1.2;
+    }
+
+    ul {
+      list-style: none;
+
+      margin-top: 30px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 16px;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        color: #d5d5d5;
+
+        font-size: 16px;
+
+        svg {
+          color: #74ff62;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .card-footer {
+      margin-top: auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      button {
+        border: none;
+        background: transparent;
+
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 16px;
+
+        cursor: pointer;
+
+        svg {
+          transition: .35s;
+        }
+
+        &:hover {
+
+          svg {
+            transform: rotate(-45deg);
+          }
+
+        }
+      }
+
+      img {
+        width: 90px;
+        transition: .35s;
+      }
+    }
+
+    &:hover {
+
+      .card-footer img {
+        transform: scale(1.08);
+      }
+
+    }
+  }
+}

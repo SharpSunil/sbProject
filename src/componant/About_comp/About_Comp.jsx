@@ -6,6 +6,9 @@ import glow from "../../assets/background_stuck/glow.png";
 import circle_img from "../../assets/background_stuck/circle.webp"
 import RoundText from "../RoundText/RoundText";
 import heroVideo from "../../assets/1.mp4"
+import { GoArrowUpRight } from "react-icons/go";
+import { Link } from "react-router-dom";
+import { MdOutlinePaid } from "react-icons/md";
 gsap.registerPlugin(ScrollTrigger);
 
 const About_Comp = () => {
@@ -82,12 +85,76 @@ const About_Comp = () => {
             </div>
             <div className="services">
               <div className="sr_left">
-                <div className="box"></div>
-                <div className="box"></div>
+                <div className="box">
+                  <div className="content-group">
+                    <div className="icon">
+                      <MdOutlinePaid />
+                    </div>
+
+                    <h3 className="heading">
+                      Paid Search <br />
+                      Marketing
+                    </h3>
+                  </div>
+
+                  <Link to="/paid-search-marketing" className="btn">Learn More
+                    <span> <GoArrowUpRight /></span>
+
+                  </Link>
+                </div>
+                <div className="box">
+                  <div className="content-group">
+                    <div className="icon">
+                      <MdOutlinePaid />
+                    </div>
+
+                    <h3 className="heading">
+                      Paid Search <br />
+                      Marketing
+                    </h3>
+                  </div>
+
+                  <Link to="/paid-search-marketing" className="btn">Learn More
+                    <span> <GoArrowUpRight /></span>
+
+                  </Link>
+                </div>
               </div>
               <div className="sr_right">
-                <div className="box"></div>
-                <div className="box"></div>
+                <div className="box">
+                  <div className="content-group">
+                    <div className="icon">
+                      <MdOutlinePaid />
+                    </div>
+
+                    <h3 className="heading">
+                      Paid Search <br />
+                      Marketing
+                    </h3>
+                  </div>
+
+                  <Link to="/paid-search-marketing" className="btn">Learn More
+                    <span> <GoArrowUpRight /></span>
+
+                  </Link>
+                </div>
+                <div className="box">
+                  <div className="content-group">
+                    <div className="icon">
+                      <MdOutlinePaid />
+                    </div>
+
+                    <h3 className="heading">
+                      Paid Search <br />
+                      Marketing
+                    </h3>
+                  </div>
+
+                  <Link to="/paid-search-marketing" className="btn">Learn More
+                    <span> <GoArrowUpRight /></span>
+
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
