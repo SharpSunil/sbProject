@@ -10,7 +10,7 @@ import heroImg from "../../assets/pic1.webp";
 import seoImg from "../../assets/pic1.webp";
 import emailImg from "../../assets/pic2.webp";
 import socialImg from "../../assets/pic3.png";
-
+import Button from "../button/Buttonmain";
 const Service = () => {
     const services = [
         {
@@ -18,6 +18,7 @@ const Service = () => {
             tag: "SEO",
             title: "Search Engine Optimization",
             image: seoImg,
+            link: "/seo-service",
             points: [
                 "On-page and off-page SEO",
                 "Keyword research and optimization",
@@ -31,6 +32,7 @@ const Service = () => {
             tag: "Email Campaign",
             title: "Email Marketing",
             image: emailImg,
+            link: "/email-marketing",
             points: [
                 "Email campaign design",
                 "Personalized email sequences",
@@ -44,6 +46,7 @@ const Service = () => {
             tag: "Social Media",
             title: "Social Media Marketing",
             image: socialImg,
+            link: "/social-media-marketing",
             points: [
                 "Community engagement",
                 "Influencer marketing",
@@ -56,6 +59,7 @@ const Service = () => {
 
     return (
         <section className="service-parent parent">
+         
             <div className="service-cont cont">
 
                 {/* ================= TOP ================= */}
@@ -140,19 +144,16 @@ const Service = () => {
 
                             <div className="card-footer">
 
-                                <button>
-
-                                    View Details
-
-                                    <GoArrowUpRight />
-
-                                </button>
-
+                                <Button
+                                    text="View Details"
+                                    link={service.link}
+                                />
+                            </div>
+                            <div className="img-box">
                                 <img
                                     src={service.image}
                                     alt=""
                                 />
-
                             </div>
 
                         </div>
