@@ -2,59 +2,87 @@ import React, { useEffect, useRef } from "react";
 import "./works.scss";
 
 import rocket from "../../assets/rocket.webp";
+import { LuScanEye } from "react-icons/lu";
+import { Link } from "react-router-dom";
+import { BsRocket } from "react-icons/bs";
 
+import { TbDeviceDesktopAnalytics } from "react-icons/tb";
+import { SiGrapheneos } from "react-icons/si";
 const Works = () => {
-  const pathRef = useRef(null);
+  const progressPathRef = useRef(null);
+  const helperPathRef = useRef(null);
   const rocketRef = useRef(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const path = pathRef.current;
-    const rocketImg = rocketRef.current;
+
+    const progressPath = progressPathRef.current;
+    const helperPath = helperPathRef.current;
+    const rocket = rocketRef.current;
     const section = sectionRef.current;
 
-    if (!path || !rocketImg || !section) return;
+    if (
+      !progressPath ||
+      !helperPath ||
+      !rocket ||
+      !section
+    )
+      return;
 
-    const length = path.getTotalLength();
+    const length = helperPath.getTotalLength();
 
-    const moveRocket = () => {
+    progressPath.style.strokeDasharray = length;
+    progressPath.style.strokeDashoffset = length;
+
+    const updateRocket = () => {
       const rect = section.getBoundingClientRect();
-
-      const windowHeight = window.innerHeight;
-
+      const viewport = window.innerHeight;
+      const start = viewport * 0.75;
+      const end = -(rect.height - viewport * 0.3);
       let progress =
-        (windowHeight - rect.top) /
-        (windowHeight + rect.height);
+        (start - rect.top) /
+        (start - end);
+      progress = Math.max(0, Math.min(progress, 1));
+      const currentLength = progress * length;
 
-      progress = Math.min(Math.max(progress, 0), 1);
+      progressPath.style.strokeDashoffset =
+        length - currentLength;
+      const point =
+        helperPath.getPointAtLength(currentLength);
 
-      const point = path.getPointAtLength(progress * length);
+      rocket.style.left = `${point.x}px`;
 
-      rocketImg.style.left = point.x + "px";
-      rocketImg.style.top = point.y + "px";
+      rocket.style.top = `${point.y}px`;
 
-      // rotation
-
-      const nextPoint = path.getPointAtLength(
-        Math.min(progress * length + 1, length)
-      );
+      const next =
+        helperPath.getPointAtLength(
+          Math.min(currentLength + 1, length)
+        );
 
       const angle =
         Math.atan2(
-          nextPoint.y - point.y,
-          nextPoint.x - point.x
+          next.y - point.y,
+          next.x - point.x
         ) *
         (180 / Math.PI);
-
-      rocketImg.style.transform = `translate(-50%,-50%) rotate(${angle + 360}deg)`;
+      rocket.style.transform =
+        `translate(-50%,-50%) rotate(${angle + 360}deg)`;
     };
 
-    moveRocket();
+    updateRocket();
+    window.addEventListener("scroll", updateRocket);
+    window.addEventListener("resize", updateRocket);
 
-    window.addEventListener("scroll", moveRocket);
-
-    return () =>
-      window.removeEventListener("scroll", moveRocket);
+    return () => {
+      window.removeEventListener(
+        "scroll",
+        updateRocket
+      );
+      window.removeEventListener(
+        "resize",
+        updateRocket
+      );
+    };
   }, []);
 
   return (
@@ -87,78 +115,113 @@ const Works = () => {
           />
 
           {/* SVG */}
-
           <svg
             className="svg-track"
             width="700"
-            height="1700"
-            viewBox="0 0 700 1700"
+            height="1100"
+            viewBox="0 0 700 1100"
           >
+
+            {/* White Path */}
+
             <path
-              ref={pathRef}
+              className="path-bg"
               d="
-              M350 40
-
-              C540 180 180 330 350 520
-
-              C520 710 180 860 350 1050
-
-              C540 1240 180 1420 350 1640
-              "
+        M350 40
+        C540 170 180 280 350 390
+        C520 520 180 640 350 760
+        C540 900 180 980 350 1080
+        "
             />
+
+            {/* Green Path */}
+
+            <path
+              ref={progressPathRef}
+              className="path-progress"
+              d="
+        M350 40
+        C540 170 180 280 350 390
+        C520 520 180 640 350 760
+        C540 900 180 980 350 1080
+        "
+            />
+
+            {/* Hidden Helper */}
+
+            <path
+              ref={helperPathRef}
+              d="
+        M350 40
+        C540 170 180 280 350 390
+        C520 520 180 640 350 760
+        C540 900 180 980 350 1080
+        "
+              fill="none"
+              stroke="transparent"
+              strokeWidth="2"
+            />
+
           </svg>
 
           {/* CARD 1 */}
 
           <div className="work-card left card1">
-            <span>01</span>
-
-            <h3>Discovery & Research</h3>
-
-            <p>
-              We analyze your business,
-              competitors and audience to
-              create the perfect strategy.
-            </p>
+            <div className="number">01</div>
+            <div className="content-group">
+              <div className="icon"><LuScanEye /></div>
+              <div className="right-body">
+                <Link to="#">Competitor analysis and keyword research</Link>
+                <p>
+                  Gain insights to stay ahead
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* CARD 2 */}
 
           <div className="work-card right card2">
-            <span>02</span>
-
-            <h3>Planning</h3>
-
-            <p>
-              We prepare a custom marketing
-              roadmap for your business.
-            </p>
+            <div className="number">02</div>
+            <div className="content-group">
+              <div className="icon"><TbDeviceDesktopAnalytics /></div>
+              <div className="right-body">
+                <Link to="#">Craft a tailored SEO and digital plan</Link>
+                <p>
+                  Tailored strategies for your brand.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* CARD 3 */}
 
           <div className="work-card left card3">
-            <span>03</span>
-
-            <h3>Execution</h3>
-
-            <p>
-              Our experts launch SEO,
-              Ads and Social campaigns.
-            </p>
+            <div className="number">03</div>
+            <div className="content-group">
+              <div className="icon"><BsRocket /></div>
+              <div className="right-body">
+                <Link to="#">Optimize your website for search engines</Link>
+                <p>
+                  Improve rankings & visibility
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* CARD 4 */}
 
           <div className="work-card right card4">
-            <span>04</span>
-
-            <h3>Growth</h3>
-
-            <p>
-              Track performance and keep
-              improving every month.
-            </p>
+            <div className="number">04</div>
+            <div className="content-group">
+              <div className="icon"><SiGrapheneos /></div>
+              <div className="right-body">
+                <Link to="#">Focus on long-term success & growth</Link>
+                <p>
+                  Build sustainable success
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>
