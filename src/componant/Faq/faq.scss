@@ -170,3 +170,16 @@
     }
   }
 }
+@media only screen and (max-width:1000px){
+    .faq-parent{
+        .faq-cont{
+            flex-direction: column;
+            .left-faq{
+                width:100%;
+            }
+            .right-faq{
+                width:100%;
+            }
+        }
+    }
+}
