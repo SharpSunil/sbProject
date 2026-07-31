@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 60px;
     .top-side {
       display: flex;
       flex-direction: column;
@@ -32,13 +33,47 @@
     .bottom-side {
       display: flex;
       align-items: stretch;
-      gap: 40px;
-      width: 100%;
-      margin-top: 60px;
+      gap: 20px;
+      width: 70%;
+      border-radius: 10px;
 
       .left-card {
         width: 40%;
         flex-shrink: 0;
+        gap: 40px;
+        background: var(--gold);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        .heading {
+          color: black;
+          font-weight: 800;
+          font-size: 130px;
+        }
+        .desc {
+          margin-top: -50px;
+          color: black;
+          font-size: 18px;
+          display: flex;
+          gap: 10px;
+          span {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+              color: var(--accent);
+            }
+          }
+        }
+        .second-heading {
+          color: black;
+          font-size: 36px;
+          text-align: center;
+          font-weight: 500;
+        }
       }
 
       .right-card {
@@ -49,17 +84,14 @@
         }
 
         .swiper-slide {
-          background: #1b1b1b;
           color: #fff;
           display: flex;
           justify-content: center;
-
           border-radius: 10px;
           align-items: center;
-          box-sizing: border-box;
           .testimonial-card {
             width: 100%;
-            background: #141414;
+            background: #2f2e2e;
 
             border-radius: 10px;
             display: flex;
@@ -67,11 +99,11 @@
 
           .testimonial-left {
             width: 65%;
-            padding: 50px;
-
+            padding: 40px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 120px;
 
             .stars {
               display: flex;
@@ -83,16 +115,55 @@
             h3 {
               color: #fff;
               font-size: 28px;
-              line-height: 1.7;
               font-weight: 500;
-              max-width: 15ch;
-              margin: 30px 0;
+              margin-top: -80px;
             }
 
             .bottom-row {
               display: flex;
               justify-content: space-between;
               align-items: center;
+              width: 100%;
+             .custom-pagination {
+  display: flex;
+  gap: 8px;
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: white;
+    opacity: .4;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 32px;
+    border-radius: 30px;
+    background: #6dfb63;
+    opacity: 1;
+  }
+}
+              .custom-navigation {
+  display: flex;
+  gap: 15px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.15);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      background: var(--green);
+      color: #000;
+      border-color: var(--green);
+    }
+  }
+}
             }
           }
 
@@ -135,24 +206,6 @@
               }
             }
           }
-        }
-
-        .swiper-pagination {
-          bottom: 0 !important;
-        }
-
-        .swiper-pagination-bullet {
-          width: 10px;
-          height: 10px;
-          background: #777;
-          opacity: 1;
-          transition: all 0.3s ease;
-        }
-
-        .swiper-pagination-bullet-active {
-          width: 30px;
-          border-radius: 20px;
-          background: var(--gold);
         }
       }
     }
