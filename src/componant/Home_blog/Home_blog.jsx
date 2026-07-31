@@ -5,14 +5,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
 import "./Home_blog.scss"
 import { Link } from "react-router-dom";
 import img1 from "../../assets/1.jpg"
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Home_blog = () => {
   return (
     <>
       <div className="home_blog-parent parent">
+
         <div className="home_blog-cont cont">
           <div className="top-box">
             <div className="main-heading">
@@ -29,7 +32,21 @@ const Home_blog = () => {
               <Button text="Let's Connect" link="/blog" />
             </div>
             <div className="right-side">
-              <Swiper className="mySwiper">
+              <Swiper
+                className="mySwiper"
+                modules={[Autoplay, Pagination]}
+                slidesPerView={1}
+                spaceBetween={20}
+                loop={true}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+              >
                 <SwiperSlide>
 
                   <div className="card-main">

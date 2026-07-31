@@ -3,6 +3,9 @@
   background: #090909;
   position: relative;
   z-index: 1;
+ 
+
+
   .home_blog-cont {
     display: flex;
     flex-direction: column;
@@ -83,10 +86,27 @@
             }
             .card-right {
               img {
-                width: 300px;
+                width: 400px;
                 border-radius: 5px;
               }
             }
+          }
+        }
+        .mySwiper {
+          padding-bottom: 45px;
+
+          .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: #888;
+            opacity: 1;
+            transition: var(--trans);
+          }
+
+          .swiper-pagination-bullet-active {
+            width: 30px;
+            border-radius: 20px;
+            background: var(--gold);
           }
         }
       }
