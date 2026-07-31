@@ -79,7 +79,7 @@ const Testimonial = () => {
                                 slidesPerView={1}
                                 loop={true}
                                 autoplay={{
-                                    delay: 3000,
+                                    delay: 30000000,
                                     disableOnInteraction: false,
                                 }}
                                 pagination={{
