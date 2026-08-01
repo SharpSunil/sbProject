@@ -3,6 +3,7 @@
   width: 100%;
   background-color: #010101;
   position: relative;
+  z-index: 1;
 
   .overlay1 {
     position: absolute;
@@ -150,12 +151,11 @@
             overflow: hidden;
             border-radius: 10px;
             background: #181818;
-            padding: 40px;
+            padding: 60px;
             display: flex;
             flex-direction: column;
             gap: 40px;
-            width: 350px;
-            height: 350px;
+            width: auto;
 
             &::before {
               content: "";
@@ -244,5 +244,31 @@
     }
   }
 }
+@media only screen and (max-width:1400px) {
+  .abt_comp {
+    .abt_comp_cont {
+      flex-direction: column;
+      .left,
+      .right {
+        width: 100%;
+      }
+      .left {
+        .circle {
+          display: none;
+        }
+        .image {
+          width: 100%;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-
+          .hero-video {
+            width: 80%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
