@@ -1,0 +1,211 @@
+.forth-sec-parent {
+  background: #080808;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  .overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url("../../../../../assets/background_stuck/grid.png");
+    background-size: contain;
+    opacity: 0.2;
+  }
+
+  .overlay2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: radial-gradient(circle at 15%, transparent 0%, #000000 14%);
+  }
+  .cl_overlay {
+    position: absolute;
+    top: 40%;
+    right: -100px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .cl_overlay1 {
+    position: absolute;
+    top: 20%;
+    left: -100px;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ 
+  }
+  .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+padding-top:100px;
+    .heading {
+      font-size: clamp(60px, 6vw, 60px);
+      font-weight: 600;
+    }
+
+    .view-btn {
+      width: 130px;
+      height: 130px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      color: var(--gold);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      cursor: pointer;
+
+      transition: var(--trans);
+
+      &:hover {
+        background: var(--gold);
+        color: #000;
+      }
+    }
+  }
+
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 50px 0px;
+    .team-row {
+      position: relative;
+      overflow: visible;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.45s;
+
+      .hover-image {
+        position: absolute;
+        width: 240px;
+        height: 300px;
+
+        left: 0;
+        top: 0;
+
+        pointer-events: none;
+        z-index: 20;
+
+        opacity: 0;
+        transform: translate(-40%, -40%) scale(0.8);
+
+        transition:
+          opacity 0.25s ease,
+          transform 0.25s ease;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 12px;
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+        }
+      }
+      .content {
+        height: auto;
+        padding: 60px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        .left {
+          .line {
+            display: flex;
+            align-items: flex-end;
+            gap: 5px;
+            font-size: clamp(36px, 4vw, 30px);
+            color: white;
+            span {
+              font-size: clamp(16px, 4vw, 16px);
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+        .social {
+          display: flex;
+          gap: 20px;
+
+          a {
+            width: 55px;
+            height: 55px;
+            border: 1px solid rgba(255, 255, 255, 0.179);
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: rgb(212, 206, 206);
+            text-decoration: none;
+            transition: var(--trans);
+
+            svg {
+              font-size: 18px;
+            }
+
+            &:hover {
+              background: #fff;
+              color: #000;
+              transform: translateY(-5px);
+              border: 1px solid white;
+            }
+          }
+        }
+        .details {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+        }
+      }
+
+      &:hover {
+        background: linear-gradient(
+          to bottom,
+          var(--gold) 0%,
+          #fff3d1 50%,
+          var(--gold) 100%
+        );
+        .left {
+          .line {
+            color: #000;
+            span {
+              color: rgba(0, 0, 0, 0.796);
+            }
+          }
+        }
+        .social {
+          a {
+            color: #000;
+            border: 1px solid rgba(0, 0, 0, 0.179);
+          }
+        }
+        .details {
+          color: #000;
+        }
+
+        .hover-image {
+          opacity: 1;
+          transform: translateY(-50%) scale(1);
+        }
+      }
+    }
+
+    .team-row:first-child {
+      border-top: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+}

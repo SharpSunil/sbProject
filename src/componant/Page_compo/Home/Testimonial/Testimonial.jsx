@@ -7,13 +7,13 @@ import "swiper/css";
 import { IoStarSharp } from "react-icons/io5";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
-import Button from "../button/Buttonmain";
+import Button from "../../../button/Buttonmain";
 import "./Testimonial.scss";
 
-import img1 from "../../assets/background_stuck/pic2.png";
-import img2 from "../../assets/background_stuck/pic3.png";
-import img3 from "../../assets/background_stuck/pic2.png";
-import logo from "../../assets/logo.png";
+import img1 from "../../../../assets/background_stuck/pic2.png";
+import img2 from "../../../../assets/background_stuck/pic3.png";
+import img3 from "../../../../assets/background_stuck/pic2.png";
+import logo from "../../../../assets/logo.png";
 
 const testimonialData = [
   {

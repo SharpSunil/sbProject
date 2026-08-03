@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Button from '../button/Buttonmain'
+import Button from '../../../button/Buttonmain'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./Home_blog.scss"
 import { Link } from "react-router-dom";
-import img1 from "../../assets/1.jpg"
+import img1 from "../../../../assets/1.jpg"
 import { Autoplay, Pagination } from "swiper/modules";
 
 const Home_blog = () => {

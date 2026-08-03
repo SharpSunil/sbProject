@@ -2,10 +2,10 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./About_Comp.scss";
-import glow from "../../assets/background_stuck/glow.png";
-import circle_img from "../../assets/background_stuck/circle.webp"
+import glow from "../../../../assets/background_stuck/glow.png";
+import circle_img from "../../../../assets/background_stuck/circle.webp"
 import RoundText from "../RoundText/RoundText";
-import heroVideo from "../../assets/1.mp4"
+import heroVideo from "../../../../assets/1.mp4"
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { MdOutlinePaid } from "react-icons/md";

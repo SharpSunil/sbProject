@@ -1,17 +1,15 @@
 import React from 'react'
-import img1 from "../../assets/1.jpg"
-import "./About.scss"
-// import glow from "../../assets/background_stuck/glow.png";
-import Timeline from '../../componant/Timeline/Timeline';
-
-const About = () => {
+import img1 from "../../../../../assets/1.jpg"
+import "./First_sec.scss"
+const First_sec = () => {
     return (
         <>
-            <div className="about-parent parent">
+
+            <div className="First-sec-parent parent">
                 <div className="overlay1"></div>
                 <div className="overlay2"></div>
 
-                <div className="about-cont cont">
+                <div className="first-sec-cont cont">
                     <span className="shape shape1 bg-contain"></span>
                     <span className="shape shape2 bg-contain" ></span>
                     <span className="shape shape3 bg-contain"></span>
@@ -38,17 +36,11 @@ const About = () => {
                         <img src={img1} alt="Image 2" />
                     </div>
                 </div>
-
-                <div className="about-second-section">
-                    <div className="top">Our Journey Through Time</div>
-                    <div className="bottom">
-                        <Timeline />
-
-                    </div>
-                </div>
             </div>
+
+
         </>
     )
 }
 
-export default About
+export default First_sec

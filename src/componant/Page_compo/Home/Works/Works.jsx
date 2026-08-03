@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./works.scss";
 
-import rocket from "../../assets/rocket.webp";
+import rocket from "../../../../assets/rocket.webp";
 import { LuScanEye } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { BsRocket } from "react-icons/bs";

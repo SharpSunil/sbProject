@@ -13,12 +13,12 @@ import gsap from "gsap";
 
 
 // Images
-import img1 from "../../assets/timeline/2.jpg";
-import img2 from "../../assets/timeline/3.jpg";
-import img3 from "../../assets/timeline/4.jpg";
-import img4 from "../../assets/timeline/2.jpg";
-import img5 from "../../assets/timeline/5.jpg";
-import img6 from "../../assets/timeline/6.jpg";
+import img1 from "../../../../assets/timeline/2.jpg";
+import img2 from "../../../../assets/timeline/3.jpg";
+import img3 from "../../../../assets/timeline/4.jpg";
+import img4 from "../../../../assets/timeline/2.jpg";
+import img5 from "../../../../assets/timeline/5.jpg";
+import img6 from "../../../../assets/timeline/6.jpg";
 
 const timelineData = [
     {

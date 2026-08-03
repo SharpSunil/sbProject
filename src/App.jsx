@@ -1,10 +1,10 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.scss'
-import Home from './pages/Home/Home'
+import Home from './pages/Home'
 import Header from './componant/Header/Header'
 import Footer from './componant/Footer/Footer'
-import About from './pages/About/About'
+import About from './pages/About'
 
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import img1 from "../../assets/1.jpg";
+import img1 from "../../../../assets/1.jpg";
 import { IoIosArrowUp } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import "./faq.scss"

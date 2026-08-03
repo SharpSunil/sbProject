@@ -5,12 +5,12 @@ import { FaCheck } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 
 // Images
-import heroImg from "../../assets/pic1.webp";
+import heroImg from "../../../../assets/1.jpg";
 
-import seoImg from "../../assets/pic1.webp";
-import emailImg from "../../assets/pic2.webp";
-import socialImg from "../../assets/pic3.png";
-import Button from "../button/Buttonmain";
+import seoImg from "../../../../assets/pic1.webp";
+import emailImg from "../../../../assets/pic2.webp";
+import socialImg from "../../../../assets/pic3.png";
+import Button from "../../../button/Buttonmain";
 const Service = () => {
     const services = [
         {
