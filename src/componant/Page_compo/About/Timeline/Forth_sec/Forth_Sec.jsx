@@ -76,7 +76,7 @@ const Forth_Sec = () => {
             <div className="cl_overlay">
                 <img src={glow} alt="" />
             </div>
-             <div className="cl_overlay1">
+            <div className="cl_overlay1">
                 <img src={glow} alt="" />
             </div>
             <div className="top-section cont">

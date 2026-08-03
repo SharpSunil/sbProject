@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
   }
-    .cl_overlay1 {
+  .cl_overlay1 {
     position: absolute;
     top: 20%;
     left: -100px;
@@ -39,15 +39,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
- 
   }
   .top-section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-padding-top:100px;
+    padding-top: 100px;
     .heading {
       font-size: clamp(60px, 6vw, 60px);
       font-weight: 600;
@@ -73,7 +71,8 @@ padding-top:100px;
         background: var(--gold);
         color: #000;
       }
-    }
+    } 
+    
   }
 
   .bottom-section {
