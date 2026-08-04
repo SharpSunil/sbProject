@@ -11,10 +11,10 @@ import Faq from "../componant/Page_compo/Home/Faq/Faq"
 const Home = () => {
   return (
     <>
-      {/* <Hero /> */}
-      {/* <About_Comp /> */}
-      {/* <MyProject /> */}
-      {/* <Service /> */}
+      <Hero />
+      <About_Comp />
+      <MyProject />
+      <Service />
       <Works />
       <Home_blog />
       <Testimonial />
