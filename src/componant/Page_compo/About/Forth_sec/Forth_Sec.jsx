@@ -1,15 +1,15 @@
 import React, { useRef } from "react";
 import "./Forth_sec.scss";
 
-import glow from "../../../../../assets/background_stuck/glow.png";
+import glow from "../../../../assets/background_stuck/glow.png";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { GoArrowUpRight } from "react-icons/go";
-import img1 from "../../../../../assets/team/pic1.png";
-import img2 from "../../../../../assets/team/pic2.png";
-import img3 from "../../../../../assets/team/pic3.png";
-import img4 from "../../../../../assets/team/pic4.png";
+import img1 from "../../../../assets/team/pic1.png";
+import img2 from "../../../../assets/team/pic2.png";
+import img3 from "../../../../assets/team/pic3.png";
+import img4 from "../../../../assets/team/pic4.png";
 import { Link } from "react-router-dom";
 const team = [
     {

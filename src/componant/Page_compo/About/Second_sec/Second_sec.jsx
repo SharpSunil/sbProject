@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Second_sec.scss"
-import Timeline from "../../Timeline/Timeline"
+import Timeline from "../Timeline/Timeline"
 const Second_sec = () => {
     return (
         <>

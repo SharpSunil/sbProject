@@ -126,13 +126,13 @@
 
     /* Royal Gold */
     .shape1 {
-      background: url("../../assets/background_stuck/bg1.webp");
+      background: url("../../../../assets/background_stuck/bg1.webp");
       filter: brightness(1) saturate(100%) invert(30%) sepia(48%)
         saturate(1038%) hue-rotate(131deg) brightness(92%) contrast(93%);
     }
 
     .shape2 {
-      background: url("../../assets/background_stuck/bg4.webp");
+      background: url("../../../../assets/background_stuck/bg4.webp");
       filter: brightness(0) saturate(100%) invert(94%) sepia(21%) saturate(720%)
         hue-rotate(350deg) brightness(108%) contrast(95%);
       left: auto;
@@ -141,7 +141,7 @@
 
     /* Deep Metallic Gold */
     .shape3 {
-      background: url("../../assets/background_stuck/bg3.webp");
+      background: url("../../../../assets/background_stuck/bg3.webp");
       top: auto;
       bottom: 25%;
       left: 5%;
@@ -151,7 +151,7 @@
 
     /* Bronze Gold */
     .shape4 {
-      background: url("../../assets/background_stuck/bg2.webp");
+      background: url("../../../../assets/background_stuck/bg2.webp");
       top: auto;
       bottom: 25%;
       left: auto;
@@ -456,6 +456,7 @@
       .social {
         gap: 12px;
         font-size: 14px;
+        right:-40px;
       }
 
       .shape {

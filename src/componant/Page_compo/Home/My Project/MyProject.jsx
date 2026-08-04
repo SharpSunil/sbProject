@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./MyProject.scss";
+import "./Myproject.scss";
 import img1 from "../../../../assets/1.jpg";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -109,7 +109,7 @@ export default function MyProject() {
                 </div>
             </section>
 
-          
+
         </>
     );
 }

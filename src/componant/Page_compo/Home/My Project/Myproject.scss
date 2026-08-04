@@ -147,43 +147,100 @@
         transform: translateY(30px);
         opacity: 1;
         transition: all 0.45s ease;
-        font-size:40px;
-        background:var(--gold);
-        color:white;
-        display: flex;align-items: center;justify-content: center;border-radius:50%;
-        padding:20px;
+        font-size: 40px;
+        background: var(--gold);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 20px;
       }
 
       h2 {
         transform: translateY(50px);
         opacity: 1;
         transition: all 0.45s ease 0.15s;
-        color:white;
+        color: white;
       }
     }
-    
-
-   
   }
   .card:hover {
-  
-  .overlay {
-    opacity: 1;
-  }
+    .overlay {
+      opacity: 1;
+    }
 
-  .content {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
+    .content {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
 
-  .icon {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    .icon {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
-  h2 {
-    transform: translateY(0);
-    opacity: 1;
+    h2 {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
+
+@media (max-width: 1000px) {
+  .myProject-parent {
+    height: 300vh;
+    .sticky-wrapper {
+      .slider-track {
+        .card {
+          width: 500px;
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .myProject-parent {
+    height: 100%;
+    .sticky-wrapper {
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      .slider-track {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        align-items: center;
+        .card {
+          width: 100%;
+          border-radius: 10px;
+          .content {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+
+            .icon {
+              transform: translateY(0);
+              opacity: 1;
+              font-size: 30px;
+              padding: 10px;
+            }
+            h2 {
+              font-size: 26px;
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+          .overlay {
+            opacity: 1;
+          }
+        }
+      }
+      .bg-heading {
+        top: 70%;
+        font-size: 120px;
+      }
+    }
+  }
 }

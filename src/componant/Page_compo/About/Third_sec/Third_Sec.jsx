@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react";
 import "./Third_sec.scss";
-import img1 from "../../../../../assets/timeline/5.jpg";
+import img1 from "../../../../assets/timeline/5.jpg";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

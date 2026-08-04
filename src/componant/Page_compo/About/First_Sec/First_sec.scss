@@ -3,23 +3,6 @@
   position: relative;
   top: 0;
   margin-top: -90px;
-  //   .overlay1 {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     height: 100%;
-  //     width: 100%;
-  //     background: url("../../assets/background_stuck/grid.png");
-  //     background-size: contain;
-  //     opacity: 0.5;
-  //   }
-
-  //   .overlay2 {
-  //     height: 100%;
-  //     width: 100%;
-  //     position: absolute;
-  //     background: radial-gradient(circle at 15%, transparent 0%, #010101 14%);
-  //   }
   .first-sec-cont {
     display: flex;
     justify-content: center;
@@ -31,7 +14,7 @@
       width: 60px;
       height: 60px;
       position: absolute;
-      z-index: 1;
+      z-index:1;
     }
     .shape1,
     .shape2,
@@ -45,13 +28,13 @@
     }
     /* Royal Gold */
     .shape1 {
-      background: url("../../assets/background_stuck/bg1.webp");
+      background: url("../../../../assets/background_stuck/bg1.webp");
       filter: brightness(1) saturate(100%) invert(30%) sepia(48%)
         saturate(1038%) hue-rotate(131deg) brightness(92%) contrast(93%);
     }
 
     .shape2 {
-      background: url("../../assets/background_stuck/bg4.webp");
+      background: url("../../../../assets/background_stuck/bg4.webp");
       filter: brightness(0) saturate(100%) invert(94%) sepia(21%) saturate(720%)
         hue-rotate(350deg) brightness(108%) contrast(95%);
       left: auto;
@@ -60,7 +43,7 @@
 
     /* Deep Metallic Gold */
     .shape3 {
-      background: url("../../assets/background_stuck/bg3.webp");
+      background: url("../../../../assets/background_stuck/bg3.webp");
       top: auto;
       bottom: 0%;
       left: 0%;
@@ -70,7 +53,7 @@
 
     /* Bronze Gold */
     .shape4 {
-      background: url("../../assets/background_stuck/bg2.webp");
+      background: url("../../../../assets/background_stuck/bg2.webp");
       top: auto;
       bottom: 0%;
       left: auto;

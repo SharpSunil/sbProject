@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
 
 // Images
-import heroImg from "../../../../assets/1.jpg";
+import heroImg from "../../../../assets/pic1.webp";
 
 import seoImg from "../../../../assets/pic1.webp";
 import emailImg from "../../../../assets/pic2.webp";

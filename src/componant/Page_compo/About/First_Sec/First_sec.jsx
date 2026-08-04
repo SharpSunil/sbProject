@@ -1,5 +1,5 @@
 import React from 'react'
-import img1 from "../../../../../assets/1.jpg"
+import img1 from "../../../../assets/1.jpg"
 import "./First_sec.scss"
 const First_sec = () => {
     return (

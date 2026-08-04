@@ -5,7 +5,6 @@
   position: relative;
   overflow: hidden;
 
-  
   .service-cont {
     width: 90%;
     max-width: 1400px;
@@ -28,7 +27,6 @@
 
     .left-side {
       flex: 1;
-
       h2 {
         color: #fff;
         font-size: clamp(50px, 5vw, 80px);
@@ -48,7 +46,7 @@
         gap: 15px;
 
         span {
-          color: #6cff5c;
+          color: var(--gold);
           font-size: 60px;
           line-height: 1;
         }
@@ -65,7 +63,7 @@
         height: 90px;
         border-radius: 50%;
         border: none;
-        background: #7dff63;
+        background: var(--gold);
         cursor: pointer;
 
         display: flex;
@@ -112,9 +110,6 @@
   .image-card,
   .service-card {
     border-radius: 24px;
-    // background: #171717;
-    // overflow: hidden;
-    // position: relative;
   }
 
   /*==========================
@@ -152,8 +147,8 @@
     }
 
     &.active {
-      border-color: #74ff62;
-      box-shadow: 0 20px 60px rgba(116, 255, 98, 0.12);
+      border-color: var(--gold);
+      box-shadow: 0 20px 60px rgba(255, 226, 98, 0.12);
     }
 
     .card-tag {
@@ -163,7 +158,7 @@
       width: fit-content;
       padding: 8px 20px;
       border-radius: 50px;
-      background: #74ff62;
+      background: var(--gold);
       color: #111;
       font-weight: 600;
       font-size: 14px;
@@ -191,7 +186,7 @@
         font-size: 16px;
 
         svg {
-          color: #74ff62;
+          color: var(--gold);
           font-size: 16px;
         }
       }
@@ -238,6 +233,70 @@
     &:hover {
       .card-footer img {
         transform: scale(1.08);
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .service-parent {
+    .service-cont {
+      .top-side {
+        .left-side {
+          h2 {
+            font-size: 40px;
+          }
+        }
+        .right-side {
+          .tag-line {
+            p {
+              font-size: 16px;
+            }
+          }
+          .circle-btn {
+            width: 60px;
+            height: 60px;
+          }
+          svg {
+            font-size: 30px;
+          }
+        }
+      }
+      .bottom-side {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .service-parent {
+    .service-cont {
+      .top-side {
+        gap: 20px;
+        .right-side {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .service-parent {
+    .service-cont {
+      .top-side {
+      }
+      .bottom-side {
+        gap: 10px;
+        grid-template-rows: repeat(1, 380px);
+        .service-card {
+          padding: 20px;
+          height: auto;
+          img{
+            width:160px;
+            
+          }
+        }
       }
     }
   }
