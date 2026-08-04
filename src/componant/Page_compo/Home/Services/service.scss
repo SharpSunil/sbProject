@@ -273,6 +273,11 @@
     .service-cont {
       .top-side {
         gap: 20px;
+        .left-side {
+          h2 {
+            font-size: 36px;
+          }
+        }
         .right-side {
           flex-direction: column;
         }
@@ -284,7 +289,12 @@
 @media only screen and (max-width: 560px) {
   .service-parent {
     .service-cont {
+      gap:0px;
       .top-side {
+        flex-direction: column;
+        h2{
+          text-align: center;
+        }
       }
       .bottom-side {
         gap: 10px;
@@ -292,9 +302,8 @@
         .service-card {
           padding: 20px;
           height: auto;
-          img{
-            width:160px;
-            
+          img {
+            width: 120px;
           }
         }
       }
