@@ -1,13 +1,22 @@
-.third-sec-parent{
-    background-color: #010101;
-    padding:100px 10px;
+.third-sec-parent {
+  background-color: #010101;
+  padding: 100px 10px;
+  .third-sec-cont {
+    img {
+      width: 100%;
+      height: 650px;
+      border-radius: 10px;
+    }
+  }
+}
+
+
+@media only screen and (max-width:1000px){
+  .third-sec-parent{
     .third-sec-cont{
-    img{
-      width:100%;
-        height: 650px;
-        border-radius: 10px;
+      img{
+        height:auto;
+      }
     }
-
-    }
-
+  }
 }

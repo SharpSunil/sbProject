@@ -1,6 +1,6 @@
 .timeline-parent {
   overflow: hidden;
-  width:70%;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   color: #fff;
@@ -17,7 +17,7 @@
     grid-template-columns: 1fr 1.2fr 1fr;
     align-items: center;
     gap: 70px;
-    padding-top:20px;
+    padding-top: 20px;
   }
 
   /*==========================
@@ -70,14 +70,14 @@
 
   .timeline-content {
     text-align: center;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 
     span {
       display: inline-block;
-      color: var(--gold);;
+      color: var(--gold);
       font-size: 18px;
       font-weight: 600;
       letter-spacing: 2px;
@@ -85,7 +85,7 @@
 
     h2 {
       font-size: 60px;
-      color:white;
+      color: white;
       line-height: 1.1;
       font-weight: 700;
     }
@@ -142,7 +142,6 @@
 
 .timeline-parent {
   .timeline-bottom {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +222,6 @@
     }
   }
 }
-
 
 /*==================================
         IMAGE ANIMATION
@@ -323,5 +321,28 @@
   to {
     opacity: 1;
     transform: translateX(0) rotate(8deg);
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .timeline-parent {
+    .timeline-container {
+       
+      .timeline-slide {
+        display: flex;
+        width: 100%;
+        margin:auto;
+        .timeline-image {
+            display: none;
+          
+        }
+        .timeline-content {
+          width: 100%;
+          h2{
+             font-size: clamp(28px, 10vw, 40px);
+          }
+        }
+      }
+    }
   }
 }

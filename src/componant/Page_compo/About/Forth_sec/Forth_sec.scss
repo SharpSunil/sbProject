@@ -45,7 +45,7 @@
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    padding-top: 100px;
+    padding-top: 100px 10px 10px 10px;
     .heading {
       font-size: clamp(60px, 6vw, 60px);
       font-weight: 600;
