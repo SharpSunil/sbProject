@@ -41,7 +41,7 @@
     align-items: center;
     justify-content: center;
 
-    background: var(--gold);
+    background: white;
     color: var(--charcoal);
 
     font-size: 22px;
@@ -54,12 +54,12 @@
     position: absolute;
     inset: 0;
 
-    background: var(--charcoal);
+    background: white;
 
     transform: scaleX(0);
     transform-origin: left;
 
-    transition: transform .45s ease;
+    transition: transform 0.45s ease;
 
     z-index: 1;
   }
@@ -69,21 +69,20 @@
   }
 
   &:hover {
-
     border-color: var(--charcoal);
 
     .text {
-      color: var(--white);
+      color: var(--accent);
     }
 
     .icon {
-      background: var(--gold);
-      color: var(--charcoal);
+      background: var(--accent);
+      color: white;
       transform: translateX(6px);
     }
   }
 
   &:active {
-    transform: scale(.97);
+    transform: scale(0.97);
   }
 }
