@@ -13,9 +13,9 @@ import Six_Sec from '../componant/Page_compo/About/Six_sec/Six_Sec'
 const About = () => {
     return (
         <>
-            {/* <First_sec /> */}
-            {/* <Second_sec /> */}
-            {/* <Third_Sec /> */}
+            <First_sec />
+            <Second_sec />
+            <Third_Sec />
             <Forth_Sec />
             <Fifth_Sec />
             <Six_Sec />
