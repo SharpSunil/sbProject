@@ -35,14 +35,15 @@
     max-width: 1100px;
     position: relative;
 
-  padding:200px 0px;
+    padding: 150px 0px 0px 0px;
     .faq-heading {
       width: 100%;
       text-align: center;
+      margin-bottom: 50px;
       h1 {
         color: #ffffff;
         font-size: clamp(52px, 6vw, 82px);
-        font-weight: 400;
+        font-weight: 600;
         line-height: 1.02;
         letter-spacing: -3px;
       }
@@ -50,7 +51,6 @@
 
     .faq-tabs-wrapper {
       width: 100%;
-
       border-bottom: 1px solid #252525;
       .faq-tabs {
         width: 100%;
@@ -123,7 +123,7 @@
 
   height: 3px;
 
-  background: #38ff6a;
+  background: var(--gold);
 
   border-radius: 2px 2px 0 0;
 }
@@ -134,8 +134,7 @@
 
 .faq-list {
   width: 100%;
-
-  margin-top: 58px;
+  height:100%;
 }
 
 /* =========================================
@@ -219,7 +218,7 @@
 }
 
 .faq-item.open .faq-icon {
-  color: #38ff6a;
+  color: var(--gold);
 
   transform: rotate(180deg);
 }

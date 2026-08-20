@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Button from "../../../button/Buttonmain";
-
 import img1 from "../../../../assets/1.jpg";
 import img2 from "../../../../assets/1.jpg";
 

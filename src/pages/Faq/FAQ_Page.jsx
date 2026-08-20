@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Faq_page.scss";
 
-import glow from "../../../assets/background_stuck/glow.png";
+import glow from "../../assets/background_stuck/glow.png";
 const FAQ_Page = () => {
     const [activeCategory, setActiveCategory] = useState("General Questions");
     const [openIndex, setOpenIndex] = useState(null);
